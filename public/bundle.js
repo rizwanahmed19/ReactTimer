@@ -109,6 +109,14 @@
 
 	var _Main2 = _interopRequireDefault(_Main);
 
+	var _Timer = __webpack_require__(242);
+
+	var _Timer2 = _interopRequireDefault(_Timer);
+
+	var _Countdown = __webpack_require__(243);
+
+	var _Countdown2 = _interopRequireDefault(_Countdown);
+
 	__webpack_require__(236);
 
 	__webpack_require__(240);
@@ -120,7 +128,12 @@
 	_reactDom2.default.render(_react2.default.createElement(
 		_reactRouter.Router,
 		{ history: _reactRouter.hashHistory },
-		_react2.default.createElement(_reactRouter.Route, { path: '/', component: _Main2.default })
+		_react2.default.createElement(
+			_reactRouter.Route,
+			{ path: '/', component: _Main2.default },
+			_react2.default.createElement(_reactRouter.IndexRoute, { component: _Timer2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'countdown', component: _Countdown2.default })
+		)
 	), document.getElementById('app'));
 
 /***/ },
@@ -26561,7 +26574,7 @@
 						null,
 						_react2.default.createElement(
 							_reactRouter.IndexLink,
-							{ activeLinkStyle: { fontWeight: 'bold' } },
+							{ to: '/', activeStyle: { fontbWeight: 'bold' } },
 							'Timer'
 						)
 					),
@@ -26570,7 +26583,7 @@
 						null,
 						_react2.default.createElement(
 							_reactRouter.Link,
-							{ to: '/countdown', activeLinkStyle: { fontWeight: 'bold' } },
+							{ to: '/countdown', activeStyle: { fontWeight: 'bold' } },
 							'Countdown'
 						)
 					)
@@ -26986,6 +26999,58 @@
 
 	// exports
 
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Timer = function Timer() {
+		return _react2.default.createElement(
+			'p',
+			null,
+			'Timer Component'
+		);
+	};
+
+	exports.default = Timer;
+
+/***/ },
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Countdown = function Countdown() {
+		return _react2.default.createElement(
+			'p',
+			null,
+			'Countdown Component'
+		);
+	};
+
+	exports.default = Countdown;
 
 /***/ }
 /******/ ]);
