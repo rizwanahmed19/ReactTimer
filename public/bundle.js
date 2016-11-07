@@ -109,9 +109,9 @@
 
 	var _Main2 = _interopRequireDefault(_Main);
 
-	__webpack_require__(235);
+	__webpack_require__(236);
 
-	__webpack_require__(239);
+	__webpack_require__(240);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26498,7 +26498,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Nav = __webpack_require__(241);
+	var _Nav = __webpack_require__(235);
 
 	var _Nav2 = _interopRequireDefault(_Nav);
 
@@ -26527,13 +26527,89 @@
 /* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(178);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Nav = function Nav(props) {
+		return _react2.default.createElement(
+			'div',
+			{ className: 'top-bar' },
+			_react2.default.createElement(
+				'div',
+				{ className: 'top-bar-left' },
+				_react2.default.createElement(
+					'ul',
+					{ className: 'menu' },
+					_react2.default.createElement(
+						'li',
+						{ className: 'menu-text' },
+						'React Timer'
+					),
+					_react2.default.createElement(
+						'li',
+						null,
+						_react2.default.createElement(
+							_reactRouter.IndexLink,
+							{ activeLinkStyle: { fontWeight: 'bold' } },
+							'Timer'
+						)
+					),
+					_react2.default.createElement(
+						'li',
+						null,
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ to: '/countdown', activeLinkStyle: { fontWeight: 'bold' } },
+							'Countdown'
+						)
+					)
+				)
+			),
+			_react2.default.createElement(
+				'div',
+				{ className: 'top-bar-right' },
+				_react2.default.createElement(
+					'ul',
+					{ className: 'menu' },
+					_react2.default.createElement(
+						'li',
+						{ className: 'menu-text' },
+						'Created by ',
+						_react2.default.createElement(
+							'a',
+							{ href: 'https://www.github.com/rizwanahmed19' },
+							'Rizwan Ahmed'
+						)
+					)
+				)
+			)
+		);
+	};
+
+	exports.default = Nav;
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(236);
+	var content = __webpack_require__(237);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
+	var update = __webpack_require__(239)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -26550,10 +26626,10 @@
 	}
 
 /***/ },
-/* 236 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(237)();
+	exports = module.exports = __webpack_require__(238)();
 	// imports
 
 
@@ -26564,7 +26640,7 @@
 
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports) {
 
 	/*
@@ -26620,7 +26696,7 @@
 
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -26872,16 +26948,16 @@
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(240);
+	var content = __webpack_require__(241);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
+	var update = __webpack_require__(239)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -26898,10 +26974,10 @@
 	}
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(237)();
+	exports = module.exports = __webpack_require__(238)();
 	// imports
 
 
@@ -26910,82 +26986,6 @@
 
 	// exports
 
-
-/***/ },
-/* 241 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(178);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Nav = function Nav(props) {
-		return _react2.default.createElement(
-			'div',
-			{ className: 'top-bar' },
-			_react2.default.createElement(
-				'div',
-				{ className: 'top-bar-left' },
-				_react2.default.createElement(
-					'ul',
-					{ className: 'menu' },
-					_react2.default.createElement(
-						'li',
-						{ className: 'menu-text' },
-						'React Timer'
-					),
-					_react2.default.createElement(
-						'li',
-						null,
-						_react2.default.createElement(
-							_reactRouter.IndexLink,
-							{ activeLinkStyle: { fontWeight: 'bold' } },
-							'Timer'
-						)
-					),
-					_react2.default.createElement(
-						'li',
-						null,
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: '/countdown', activeLinkStyle: { fontWeight: 'bold' } },
-							'Countdown'
-						)
-					)
-				)
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'top-bar-right' },
-				_react2.default.createElement(
-					'ul',
-					{ className: 'menu' },
-					_react2.default.createElement(
-						'li',
-						{ className: 'menu-text' },
-						'Created by ',
-						_react2.default.createElement(
-							'a',
-							{ href: 'https://www.github.com/rizwanahmed19' },
-							'Rizwan Ahmed'
-						)
-					)
-				)
-			)
-		);
-	};
-
-	exports.default = Nav;
 
 /***/ }
 /******/ ]);
