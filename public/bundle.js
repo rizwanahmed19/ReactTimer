@@ -26708,11 +26708,21 @@
 				var _this2 = this;
 
 				this.timer = setInterval(function () {
-					var nextCount = _this2.state.count - 1;
+					var newCount = _this2.state.count - 1;
 					_this2.setState({
-						count: nextCount >= 0 ? nextCount : 0
+						count: newCount >= 0 ? newCount : 0
 					});
+
+					if (newCount === 0) {
+						_this2.setState({ countdownStatus: 'stopped' });
+					}
 				}, 1000);
+			}
+		}, {
+			key: 'componentWillUnmount',
+			value: function componentWillUnmount() {
+				clearInterval(this.timer);
+				this.timer = undefined;
 			}
 		}, {
 			key: 'handleSetCountdown',

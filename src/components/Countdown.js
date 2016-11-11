@@ -28,11 +28,19 @@ class Countdown extends React.Component {
 	}
 	startTimer(){
 		this.timer = setInterval(() => {
-			var nextCount = this.state.count - 1;
+			var newCount = this.state.count - 1;
 			this.setState({
-				count: nextCount >= 0 ? nextCount : 0
+				count: newCount >= 0 ? newCount : 0
 			});
+
+			if(newCount === 0){
+				this.setState({countdownStatus: 'stopped'});
+			}
 		}, 1000);
+	}
+	componentWillUnmount(){
+		clearInterval(this.timer);
+		this.timer = undefined;
 	}
 	handleSetCountdown(seconds){
 		this.setState({ 
