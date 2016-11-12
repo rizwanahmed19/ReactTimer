@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 var htmlWebpackPlugin = require('html-webpack-plugin');
 var htmlWebpackPluginConfig = new htmlWebpackPlugin({
 	template: './src/main.html',
@@ -35,6 +36,11 @@ module.exports = {
 					presets: ['react', 'es2015', 'stage-2']
 				} 
 			}
+		]
+	},
+	sassLoader: {
+		includePaths: [
+			path.resolve(__dirname, './node_modules/foundation-sites/scss')
 		]
 	},
 	plugins: [

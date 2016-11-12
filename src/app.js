@@ -6,7 +6,6 @@ import Timer from './components/Timer';
 import Countdown from './components/Countdown';
 
 
-import 'style!css!foundation-sites/dist/foundation.min.css';
 $(document).foundation();
 
 import 'style!css!sass!./styles/app.scss';
